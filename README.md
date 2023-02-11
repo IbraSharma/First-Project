@@ -9,5 +9,13 @@ I chose Food parameter to Returns all beers matching the supplied food string.
 Get Random Beer:
 Pick up random beer from the API, this takes no paramaters.
 
+How works:
+user input name 
+user input food choice
+user requested to answer recomndation (yes/no/abv)
+if yes, print recomdation
+if abv, select % abv to collect beer > abv selected
+if no, quite and break exit from loop. 
+
 
 
