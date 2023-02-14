@@ -4,6 +4,29 @@ from random import randint
 
 
 
+def extract_beerfile():
+            foodChoice = input()
+            url = f'https://api.punkapi.com/v2/beers?food={foodChoice}'
+            r = requests.get(url)
+            data = json.loads(r.text)
+        # List of dict 
+            beer_list = []
+            for beer in data:
+                    name = beer['name']
+                    tagline = beer['tagline']
+                    abv = beer['abv']
+                    ibu = beer['ibu']
+
+                    beer_item = {
+                    'name': name,
+                    'tagline': tagline,
+                    'abv': abv,
+                    'ibu': ibu
+                    }
+                    beer_list.append(beer_item)
+            print(beer_list)
+
+
 
 #Gets a random Beer 
 def recomendation_beer(beer_list):
